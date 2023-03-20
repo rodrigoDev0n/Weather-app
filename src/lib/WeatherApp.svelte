@@ -39,8 +39,7 @@
             <img src={weather.condition.icon} alt={weather.condition.text} />
         </div>
         <div class="weatherData-container">
-            <p style={`color: ${weather.colorText}`}>{weather.condition.text}</p>
-            <p style={`color: ${weather.colorText}`}>{weather.temperatura}°C</p>
+            <p class="temp" style={`font-size: 60px; color: ${weather.colorText}`}>{weather.temperatura}°C</p>
         </div>
     </div>
 {/await}
@@ -51,6 +50,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         width: 100%;
     }
 
@@ -107,7 +107,6 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        padding: 0 1rem;
     }
 
     .weatherData-container {
@@ -115,5 +114,9 @@
         align-items: center;
         justify-content: space-evenly;
         width: 100%;
+    }
+
+    .temp {
+        font-size: 100px;
     }
 </style>
